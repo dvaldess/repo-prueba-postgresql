@@ -117,7 +117,6 @@ SELECT nombre_autor, apellido_autor, fecha_nacimiento_autor FROM autores WHERE f
 
 -- Como lograr la consulta, 
 
-
 -- Primero buscar la información que necesitas
 
 SELECT libro_id, count(*) AS cuantas_veces_solicitado FROM prestamos GROUP BY libro_id HAVING COUNT(*)>1;
