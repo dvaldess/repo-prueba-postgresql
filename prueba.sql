@@ -120,7 +120,6 @@ SELECT nombre_autor, apellido_autor, fecha_nacimiento_autor FROM autores WHERE f
 
 -- Primero buscar la información que necesitas
 
-
 SELECT libro_id, count(*) AS cuantas_veces_solicitado FROM prestamos GROUP BY libro_id HAVING COUNT(*)>1;
 SELECT titulo FROM libros INNER JOIN prestamos ON libros.id = prestamos.libro_id;
 SELECT libro_id FROM prestamos INNER JOIN libros ON prestamos.libro_id = libros.id;
